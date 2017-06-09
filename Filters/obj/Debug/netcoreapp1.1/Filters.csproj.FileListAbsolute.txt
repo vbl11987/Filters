@@ -1,0 +1,8 @@
+/home/boris/dotnet/FilterProject/Filters/bin/Debug/netcoreapp1.1/Filters.deps.json
+/home/boris/dotnet/FilterProject/Filters/bin/Debug/netcoreapp1.1/Filters.runtimeconfig.json
+/home/boris/dotnet/FilterProject/Filters/bin/Debug/netcoreapp1.1/Filters.runtimeconfig.dev.json
+/home/boris/dotnet/FilterProject/Filters/bin/Debug/netcoreapp1.1/Filters.dll
+/home/boris/dotnet/FilterProject/Filters/bin/Debug/netcoreapp1.1/Filters.pdb
+/home/boris/dotnet/FilterProject/Filters/obj/Debug/netcoreapp1.1/Filters.AssemblyInfo.cs
+/home/boris/dotnet/FilterProject/Filters/obj/Debug/netcoreapp1.1/Filters.dll
+/home/boris/dotnet/FilterProject/Filters/obj/Debug/netcoreapp1.1/Filters.pdb
