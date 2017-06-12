@@ -29,10 +29,22 @@ namespace Filters
         public void ConfigureServices(IServiceCollection services)
         {
             //services.AddScoped<IFilterDiagnostics, FilterDiagnostics>();
-            services.AddSingleton<IFilterDiagnostics, FilterDiagnostics>();
-            services.AddSingleton<TimeFilter>();
+            //services.AddSingleton<IFilterDiagnostics, FilterDiagnostics>();
+            //services.AddSingleton<TimeFilter>();
+
+            //Adding global filter and all the dependencies
+            services.AddScoped<IFilterDiagnostics, FilterDiagnostics>();
+            services.AddScoped<TimeFilter>();
+            services.AddScoped<ViewResultDiagnostics>();
+            services.AddScoped<DiagnosticsFilter>();
+            services.AddMvc().AddMvcOptions(options => {
+                options.Filters.Add(new MessageAttribute("This is the Globally-Scoped Filter"));
+                options.Filters.AddService(typeof(ViewResultDiagnostics));
+                options.Filters.AddService(typeof(DiagnosticsFilter));
+            });
+
             // Add framework services.
-            services.AddMvc();
+            //services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

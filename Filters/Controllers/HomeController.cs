@@ -14,11 +14,15 @@ namespace Filters.Controllers
     //[ViewResultDetailAsync]
     //[ProfileHybrid]
     //[RangeException]
-    [TypeFilter(typeof(DiagnosticsFilter))]
-    [ServiceFilter(typeof(TimeFilter))]
+    //[TypeFilter(typeof(DiagnosticsFilter))]
+    //[ServiceFilter(typeof(TimeFilter))]
+    [Message("This is the Controller-Scoped Filter")]
     public class HomeController : Controller
     {
-        
+        [Message("This is the First Action-Scoped Filter")]
+        [Message("This is the Second Action-Scoped Filter")]
+        //Changing the normal order of the filters
+        [Message("This is the first Action-Scoped", Order = -1)]
         public IActionResult Index()
         {
             return View("Message", "This is the Index action on the Home controller");
